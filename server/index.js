@@ -2,8 +2,12 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173", "https://nba-predictor.vercel.app" }));
-
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://nba-predictor-five.vercel.app"
+  ]
+}));
 // ESPN numeric team IDs
 const ESPN_IDS = {
   ATL: 1, BOS: 2, BKN: 17, CHA: 30, CHI: 4, CLE: 5, DAL: 6, DEN: 7,
